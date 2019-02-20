@@ -7,14 +7,14 @@ package swing;
 
 /**
  *
- * @author RONY 1
+ * @author Student- J2EE
  */
-public class swingProject extends javax.swing.JPanel {
+public class index extends javax.swing.JPanel {
 
     /**
-     * Creates new form swingProject
+     * Creates new form index
      */
-    public swingProject() {
+    public index() {
         initComponents();
     }
 
@@ -27,37 +27,19 @@ public class swingProject extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tex = new javax.swing.JLabel();
-
-        tex.setBackground(new java.awt.Color(102, 102, 255));
-        tex.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        tex.setForeground(java.awt.Color.red);
-        tex.setLabelFor(tex);
-        tex.setText("Hellow would");
-        tex.setAutoscrolls(true);
-        tex.setNextFocusableComponent(tex);
-        tex.setOpaque(true);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(133, 133, 133)
-                .addComponent(tex, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
-                .addContainerGap(67, Short.MAX_VALUE))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(tex, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(196, Short.MAX_VALUE))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel tex;
     // End of variables declaration//GEN-END:variables
 }
