@@ -3,11 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-<<<<<<< HEAD
-package com.coderbd.conn;
-=======
 package swing;
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -31,11 +27,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class FromBasic extends javax.swing.JFrame {
 
-<<<<<<< HEAD
     String fna, addr, coun, gend;
-=======
-    String fna, addr, coun, gend, id;
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
     String degree = " ";
     String gap = " ";
     JFileChooser fc;
@@ -51,10 +43,6 @@ public class FromBasic extends javax.swing.JFrame {
         model = new DefaultTableModel();
         tblStudents.setModel(model);
         model.addColumn("Name");
-<<<<<<< HEAD
-=======
-        model.addColumn("id");
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         model.addColumn("Address");
         model.addColumn("Country");
         model.addColumn("Gender");
@@ -89,11 +77,6 @@ public class FromBasic extends javax.swing.JFrame {
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
-<<<<<<< HEAD
-=======
-        jLabel8 = new javax.swing.JLabel();
-        txtID = new javax.swing.JTextField();
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         panTable = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblStudents = new javax.swing.JTable();
@@ -106,10 +89,6 @@ public class FromBasic extends javax.swing.JFrame {
         btnDisplayTable = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
-<<<<<<< HEAD
-        lblMsg = new javax.swing.JTextField();
-=======
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -187,11 +166,6 @@ public class FromBasic extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-<<<<<<< HEAD
-=======
-        jLabel8.setText("ID :");
-
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -207,12 +181,7 @@ public class FromBasic extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
-<<<<<<< HEAD
                             .addComponent(jLabel5))
-=======
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel8))
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
                         .addGap(33, 33, 33)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -222,12 +191,7 @@ public class FromBasic extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(textName)
                                 .addComponent(textAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
-<<<<<<< HEAD
                                 .addComponent(cmdCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-=======
-                                .addComponent(cmdCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))))
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
                 .addGap(0, 209, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -237,15 +201,7 @@ public class FromBasic extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(textName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-<<<<<<< HEAD
                 .addGap(18, 18, 18)
-=======
-                .addGap(1, 1, 1)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(1, 1, 1)
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(textAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -281,12 +237,12 @@ public class FromBasic extends javax.swing.JFrame {
             }
         ));
         tblStudents.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 tblStudentsAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
         });
         jScrollPane1.setViewportView(tblStudents);
@@ -318,11 +274,7 @@ public class FromBasic extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-<<<<<<< HEAD
-                .addContainerGap(16, Short.MAX_VALUE))
-=======
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 255), 3));
@@ -342,25 +294,10 @@ public class FromBasic extends javax.swing.JFrame {
         });
 
         btnDisplayTable.setText("Display Table");
-        btnDisplayTable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDisplayTableActionPerformed(evt);
-            }
-        });
 
         btnClear.setText("Clear");
-        btnClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClearActionPerformed(evt);
-            }
-        });
 
         btnExit.setText("Exit");
-        btnExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExitActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -382,11 +319,7 @@ public class FromBasic extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addGap(42, 42, 42)
-=======
                 .addContainerGap()
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnDisplayArea)
@@ -407,19 +340,11 @@ public class FromBasic extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(574, 574, 574)
                         .addComponent(jLabel1))
-<<<<<<< HEAD
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(lblMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 463, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-=======
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,15 +354,8 @@ public class FromBasic extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panTable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-<<<<<<< HEAD
-                .addComponent(lblMsg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83)
-=======
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(106, 106, 106)
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -449,24 +367,13 @@ public class FromBasic extends javax.swing.JFrame {
     }//GEN-LAST:event_rdMaleActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-<<<<<<< HEAD
 //save
-=======
-        //save file
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         getAllRecord();
 
         if (textName.getText().isEmpty()) {
 
             JOptionPane.showMessageDialog(rootPane, "name is empaty ");
             textName.requestFocus();
-<<<<<<< HEAD
-=======
-        }
-        if (Integer.parseInt(txtID.getText()) < 5) {
-            JOptionPane.showMessageDialog(null, "Enter your id number");
-            txtID.requestFocus();
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         } else if (textAddress.getText().isEmpty()) {
 
             JOptionPane.showMessageDialog(rootPane, "Address is empaty ");
@@ -481,21 +388,16 @@ public class FromBasic extends javax.swing.JFrame {
             } else {
 
                 fc = new JFileChooser(dir);
-<<<<<<< HEAD
-
                 //add file fielter
+
                 FileNameExtensionFilter fielter;
 
-=======
-                FileNameExtensionFilter fielter;
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
-                fielter = new FileNameExtensionFilter("*.txt", new String[]{"txt"});
+                fielter = new FileNameExtensionFilter(".txt", new String[]{"txt"});
                 fc.addChoosableFileFilter(fielter);
                 int option = fc.showSaveDialog(this);
 
                 if (option == JFileChooser.APPROVE_OPTION) {
                     dir = fc.getCurrentDirectory();
-<<<<<<< HEAD
                     model.addRow(new Object[]{fna, addr, coun, gend, degree});
                     file = fc.getSelectedFile();
                     try {
@@ -510,9 +412,6 @@ public class FromBasic extends javax.swing.JFrame {
             }
 
         }
-
-        JOptionPane.showMessageDialog(rootPane, "name is empaty ");
-        lblMsg.setText("Successfully Added into Table and Write to File");
 
 
     }//GEN-LAST:event_btnSaveActionPerformed
@@ -531,44 +430,10 @@ public class FromBasic extends javax.swing.JFrame {
 
             if (checkBox.isSelected()) {
 
-=======
-                    model.addRow(new Object[]{fna,id, addr, coun, gend, degree});
-                    file = fc.getSelectedFile();
-
-                    try {
-                        writeAll();
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
-                    }
-                    degree = " ";
-                }
-            }
-        }
-    }//GEN-LAST:event_btnSaveActionPerformed
-
-    public void getAllRecord() {
-
-        fna = textName.getText();
-        id = txtID.getText();
-        addr = textAddress.getText();
-        coun = cmdCountry.getSelectedItem().toString();
-        if (rdMale.isSelected()) {
-            gend = "Male";
-        } else {
-            gend = "Female";
-        }
-        for (int i = 0; i < panDegree.getComponentCount(); i++) {
-            JCheckBox checkBox = (JCheckBox) panDegree.getComponent(i);
-            if (checkBox.isSelected()) {
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
                 degree += checkBox.getText();
                 degree += gap;
 
             }
-<<<<<<< HEAD
-=======
-
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         }
 
     }
@@ -576,20 +441,12 @@ public class FromBasic extends javax.swing.JFrame {
     private void writeAll() throws IOException {
 
         BufferedWriter buf = null;
-<<<<<<< HEAD
 
         try {
             buf = new BufferedWriter(new FileWriter(file + getExtention(), true));
             buf.write(fna + "," + addr + "," + coun + "," + gend + "," + degree);
             buf.newLine();
             JOptionPane.showMessageDialog(rootPane, "Data Save");
-=======
-        try {
-            buf = new BufferedWriter(new FileWriter(file + getExtention(), true));
-            buf.write(fna + " ," + id + " ," + addr + " ," + coun + " ," + gend + ", " + degree);
-            buf.newLine();
-            JOptionPane.showMessageDialog(rootPane, "save data");
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -597,7 +454,6 @@ public class FromBasic extends javax.swing.JFrame {
                 buf.close();
 
             }
-<<<<<<< HEAD
 
         }
     }
@@ -610,17 +466,6 @@ public class FromBasic extends javax.swing.JFrame {
         if (extension.equals("*.txt")) {
             ext = ".txt";
 
-=======
-        }
-
-    }
-
-    private String getExtention() {
-        String ext = " ";
-        String extension = fc.getFileFilter().getDescription();
-        if (extension.equals("*.txt")) {
-            ext = ".txt";
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         }
         return ext;
 
@@ -649,10 +494,6 @@ public class FromBasic extends javax.swing.JFrame {
                     } catch (IOException e) {
                     }
                     str = str + str2;
-<<<<<<< HEAD
-=======
-
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
                 }
                 txtShow.setText(str);
             } catch (Exception e) {
@@ -665,22 +506,14 @@ public class FromBasic extends javax.swing.JFrame {
                     }
                 } catch (Exception e) {
                 }
-<<<<<<< HEAD
 
             }
-=======
-            }
-
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         }
     }
 
     private void dispTable() {
-        InputStream is = null;
-<<<<<<< HEAD
+        InputStream is;
 
-=======
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
         fc = new JFileChooser(dir);
         int option = fc.showOpenDialog(this);
         if (option == JFileChooser.APPROVE_OPTION) {
@@ -689,67 +522,14 @@ public class FromBasic extends javax.swing.JFrame {
             try {
                 File f = file;
                 is = new FileInputStream(f);
-                Scanner scan = new Scanner(is);
-                String[] arr;
-                while (scan.hasNextLine()) {
-<<<<<<< HEAD
-=======
-
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
-                    String line = scan.nextLine();
-                    if (line.indexOf(",") > 1) {
-                        arr = line.split(",");
-
-                    } else {
-                        arr = line.split("\n");
-                    }
-                    Object[] data = new Object[arr.length];
-                    for (int i = 0; i < data.length; i++) {
-                        data[i] = arr[i];
-
-                    }
-                    model.addRow(data);
-                }
-<<<<<<< HEAD
+                Scanner scc = new Scanner(System.in);
             } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-
-                try {
-                    if (is != null) {
-
-                        is.close();
-
-                    }
-                } catch (Exception e) {
-                }
-
             }
 
         }
 
     }
 
-=======
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (is != null) {
-                        is.close();
-
-                    }
-
-                } catch (Exception e) {
-                }
-            }
-
-        }
-    }
-
-
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
     private void tblStudentsAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tblStudentsAncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_tblStudentsAncestorAdded
@@ -759,56 +539,34 @@ public class FromBasic extends javax.swing.JFrame {
         dispTArea();
     }//GEN-LAST:event_btnDisplayAreaActionPerformed
 
-    private void btnDisplayTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisplayTableActionPerformed
-        dispTable();
-    }//GEN-LAST:event_btnDisplayTableActionPerformed
-
-    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
-        clear();
-    }//GEN-LAST:event_btnClearActionPerformed
-
-    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_btnExitActionPerformed
-
-    private void clear() {
-        textName.setText("");
-        textAddress.setText("");
-        cmdCountry.setSelectedIndex(0);
-<<<<<<< HEAD
-        lblMsg.setText("");
-=======
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
-        degree = "";
-        gender.clearSelection();
-        for (int i = 0; i < panDegree.getComponentCount(); i++) {
-
-            JCheckBox chechbox = (JCheckBox) panDegree.getComponent(i);
-            if (chechbox.isSelected()) {
-                chechbox.setSelected(false);
-
-            }
-        }
-        if (tblStudents.getRowCount() > 0) {
-            for (int i = tblStudents.getRowCount() - 1; i > -1; i--) {
-
-                model.removeRow(i);
-            }
-
-        }
-        txtShow.setText("");
-
-    }
-
     /**
-<<<<<<< HEAD
      * @param args the command line arguments
-=======
-     * @param args the command line argum ents
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
      */
     public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(FromBasic.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(FromBasic.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(FromBasic.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FromBasic.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FromBasic().setVisible(true);
@@ -835,19 +593,11 @@ public class FromBasic extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-<<<<<<< HEAD
-=======
-    private javax.swing.JLabel jLabel8;
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-<<<<<<< HEAD
-    private javax.swing.JTextField lblMsg;
-=======
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
     private javax.swing.JPanel panDegree;
     private javax.swing.JPanel panTable;
     private javax.swing.JRadioButton rdFemail;
@@ -855,10 +605,6 @@ public class FromBasic extends javax.swing.JFrame {
     private javax.swing.JTable tblStudents;
     private javax.swing.JTextField textAddress;
     private javax.swing.JTextField textName;
-<<<<<<< HEAD
-=======
-    private javax.swing.JTextField txtID;
->>>>>>> 9a26e8c9a6498542a56c29448be55c116505b3cd
     private javax.swing.JTextArea txtShow;
     // End of variables declaration//GEN-END:variables
 }
