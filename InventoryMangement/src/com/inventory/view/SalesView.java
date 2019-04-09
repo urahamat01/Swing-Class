@@ -134,6 +134,11 @@ public class SalesView extends javax.swing.JFrame {
         txtPName.setBackground(new java.awt.Color(0, 0, 204));
         txtPName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPName.setForeground(new java.awt.Color(255, 255, 255));
+        txtPName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPNameActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -525,6 +530,10 @@ public class SalesView extends javax.swing.JFrame {
       new SalesView().setVisible(true);
        this.setVisible(false);
     }//GEN-LAST:event_btnProductSales1ActionPerformed
+
+    private void txtPNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPNameActionPerformed
 
     /**
      * @param args the command line arguments

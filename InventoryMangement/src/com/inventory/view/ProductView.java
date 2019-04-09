@@ -154,6 +154,11 @@ public class ProductView extends javax.swing.JFrame {
         txtPName.setBackground(new java.awt.Color(0, 0, 204));
         txtPName.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPName.setForeground(new java.awt.Color(255, 255, 255));
+        txtPName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPNameActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -317,6 +322,15 @@ public class ProductView extends javax.swing.JFrame {
                 "Id", "Product Name", "Product Code", "Buy Date", "Quentity", "Unit Price", "Total Amount"
             }
         ));
+        tabDisplay.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                tabDisplayAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         tabDisplay.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabDisplayMouseClicked(evt);
@@ -378,8 +392,8 @@ public class ProductView extends javax.swing.JFrame {
             try {
                 Summary summary = sDao.getSummaryByProductCode(txtPCode.getText().trim());
                 if (summary.getProductCode() != null) {
-                    int totalQty = Integer.parseInt(txtQty.getText().trim());
-                    int avaiableQty = Integer.parseInt(txtQty.getText().trim());
+                    int totalQty = summary.getTotalQty() + Integer.parseInt(txtQty.getText().trim());
+                    int avaiableQty = summary.getAvailableQty() + Integer.parseInt(txtQty.getText().trim());
                     
                     Summary summaryUp = new Summary(summary.getProductCode(), totalQty, summary.getSoldQty(), avaiableQty);
                     sDao.update(summaryUp);
@@ -466,6 +480,14 @@ public class ProductView extends javax.swing.JFrame {
         new SalesView().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnBuy2ActionPerformed
+
+    private void txtPNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPNameActionPerformed
+
+    private void tabDisplayAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_tabDisplayAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tabDisplayAncestorAdded
 
     /**
      * @param args the command line arguments

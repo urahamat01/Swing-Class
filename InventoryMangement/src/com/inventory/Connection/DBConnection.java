@@ -19,11 +19,15 @@ public class DBConnection {
     static Connection con = null;
     public static Connection getConnect(){
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/inventory", "root", "1234");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/salesmgmt", "root", "123456");
             System.out.println("Connected");
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
         return con;
+    }
+
+    public static Connection getDBConnection() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
