@@ -22,7 +22,7 @@ public interface ProductDao {
 
     void delete(int id);
 
-    Product getProductById(int id);
+    Product geProductById(int id);
 
     Product getProductByCode(String code);
 

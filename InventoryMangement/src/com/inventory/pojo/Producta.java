@@ -34,6 +34,10 @@ public class Producta {
         this.total = total;
     }
 
+    public Producta(String productName, String productCode, Date date, int quentity, double unitPrice, double totalAmount) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getId() {
         return id;
     }

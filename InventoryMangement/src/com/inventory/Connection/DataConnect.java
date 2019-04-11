@@ -12,7 +12,7 @@ public class DataConnect {
 //    
 
     public static void main(String[] args) {
-        Connection conn = null;
+        Connection conn ;
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/salesmen", "root", "123456");
             System.out.println("Connection");

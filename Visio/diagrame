@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Flight-Reservation-System-using-Java-SE-8">
+  <ClassDiagramComponents>
+    <Class name="BookingManager" package="" visibility="public" xPosition="9.0" yPosition="32.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="doj" type="String" visibility="private"/>
+        <Field name="passno" type="int" visibility="private"/>
+        <Field name="numseatsavailable" type="int" visibility="private"/>
+        <Field name="numseatsremaining" type="int" visibility="private"/>
+        <Field name="bookingID" type="String" visibility="private"/>
+        <Field name="mgr" type="FRSManager" visibility="package"/>
+        <Field name="dmgr" type="DataManager" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="FRSManager" name="mgr"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="checkSeatsAvailability" returnType="boolean" visibility="public">
+          <Argument type="int" name="passno"/>
+          <Argument type="String" name="doj"/>
+          <Argument type="Flight" name="sj"/>
+          <Argument type="Flight" name="sl"/>
+        </Method>
+        <Method name="updateSeats" returnType="void" visibility="public">
+          <Argument type="int" name="passno"/>
+          <Argument type="String" name="doj"/>
+          <Argument type="ComboFlight" name="mycf"/>
+        </Method>
+        <Method name="bookFlight" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="int" name="passno"/>
+          <Argument type="String" name="doj"/>
+          <Argument type="String" name="name"/>
+          <Argument type="ComboFlight" name="mycf"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComboFlight" package="" visibility="public" xPosition="403.0" yPosition="0.0">
+      <Fields>
+        <Field name="via" type="String" visibility="private"/>
+        <Field name="doj" type="String" visibility="private"/>
+        <Field name="day" type="String" visibility="private"/>
+        <Field name="transit_time" type="String" visibility="private"/>
+        <Field name="total_time" type="String" visibility="private"/>
+        <Field name="flightno_sj" type="String" visibility="private"/>
+        <Field name="flightno_sl" type="String" visibility="private"/>
+        <Field name="sjdepTime" type="String" visibility="private"/>
+        <Field name="sjarrTime" type="String" visibility="private"/>
+        <Field name="sldepTime" type="String" visibility="private"/>
+        <Field name="slarrTime" type="String" visibility="private"/>
+        <Field name="transit_hrs" type="Double" visibility="private"/>
+        <Field name="hrs" type="String" visibility="private"/>
+        <Field name="mins" type="String" visibility="private"/>
+        <Field name="time" type="String" visibility="private"/>
+        <Field name="nextDay" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="via"/>
+          <Argument type="String" name="flightno_sj"/>
+          <Argument type="String" name="flightno_sl"/>
+          <Argument type="String" name="sjdepTime"/>
+          <Argument type="String" name="sldepTime"/>
+          <Argument type="String" name="sjarrTime"/>
+          <Argument type="String" name="slarrTime"/>
+          <Argument type="String" name="transit_time"/>
+          <Argument type="String" name="total_time"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calcDayshort" returnType="String" visibility="public">
+          <Argument type="String" name="doj"/>
+        </Method>
+        <Method name="calcDaylong" returnType="String" visibility="public">
+          <Argument type="String" name="doj"/>
+        </Method>
+        <Method name="dojDate" returnType="Date" visibility="public">
+          <Argument type="String" name="doj"/>
+        </Method>
+        <Method name="calcTransit_time" returnType="void" visibility="public">
+          <Argument type="String" name="doj"/>
+          <Argument type="Flight" name="sj"/>
+          <Argument type="Flight" name="sl"/>
+        </Method>
+        <Method name="calcTotal_time" returnType="void" visibility="public">
+          <Argument type="String" name="doj"/>
+          <Argument type="Flight" name="sj"/>
+          <Argument type="Flight" name="sl"/>
+        </Method>
+        <Method name="daysSJ" returnType="List&lt;String&gt;" visibility="public">
+          <Argument type="Flight" name="sj"/>
+        </Method>
+        <Method name="daysSL" returnType="List&lt;String&gt;" visibility="public">
+          <Argument type="Flight" name="sl"/>
+        </Method>
+        <Method name="dateSJmin" returnType="Date" visibility="public">
+          <Argument type="Flight" name="sj"/>
+        </Method>
+        <Method name="dateSJmax" returnType="Date" visibility="public">
+          <Argument type="Flight" name="sj"/>
+        </Method>
+        <Method name="dateSL" returnType="boolean" visibility="public">
+          <Argument type="Flight" name="sl"/>
+          <Argument type="Date" name="d"/>
+        </Method>
+        <Method name="originCodes" returnType="void" visibility="public">
+          <Argument type="Flight" name="sj"/>
+        </Method>
+        <Method name="destinationCodes" returnType="void" visibility="public">
+          <Argument type="Flight" name="sj"/>
+        </Method>
+        <Method name="sectorCodes" returnType="void" visibility="public">
+          <Argument type="Flight" name="sl"/>
+        </Method>
+        <Method name="getTransit_time" returnType="String" visibility="public"/>
+        <Method name="getTotal_time" returnType="String" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="ComboFlight" name="t"/>
+        </Method>
+        <Method name="getTransit_hrs" returnType="Double" visibility="public"/>
+        <Method name="setTransit_hrs" returnType="void" visibility="public">
+          <Argument type="Double" name="transit_hrs"/>
+        </Method>
+        <Method name="getVia" returnType="String" visibility="public"/>
+        <Method name="setVia" returnType="void" visibility="public">
+          <Argument type="String" name="via"/>
+        </Method>
+        <Method name="getFlightno_sj" returnType="String" visibility="public"/>
+        <Method name="setFlightno_sj" returnType="void" visibility="public">
+          <Argument type="String" name="flightno_sj"/>
+        </Method>
+        <Method name="getFlightno_sl" returnType="String" visibility="public"/>
+        <Method name="setFlightno_sl" returnType="void" visibility="public">
+          <Argument type="String" name="flightno_sl"/>
+        </Method>
+        <Method name="getSjdepTime" returnType="String" visibility="public"/>
+        <Method name="setSjdepTime" returnType="void" visibility="public">
+          <Argument type="String" name="sjdepTime"/>
+        </Method>
+        <Method name="getSjarrTime" returnType="String" visibility="public"/>
+        <Method name="setSjarrTime" returnType="void" visibility="public">
+          <Argument type="String" name="sjarrTime"/>
+        </Method>
+        <Method name="getSldepTime" returnType="String" visibility="public"/>
+        <Method name="setSldepTime" returnType="void" visibility="public">
+          <Argument type="String" name="sldepTime"/>
+        </Method>
+        <Method name="getSlarrTime" returnType="String" visibility="public"/>
+        <Method name="setSlarrTime" returnType="void" visibility="public">
+          <Argument type="String" name="slarrTime"/>
+        </Method>
+        <Method name="setTransit_time" returnType="void" visibility="public">
+          <Argument type="String" name="transit_time"/>
+        </Method>
+        <Method name="setTotal_time" returnType="void" visibility="public">
+          <Argument type="String" name="total_time"/>
+        </Method>
+        <Method name="getTime" returnType="String" visibility="public"/>
+        <Method name="setTime" returnType="void" visibility="public">
+          <Argument type="String" name="time"/>
+        </Method>
+        <Method name="getDay" returnType="String" visibility="public"/>
+        <Method name="setDay" returnType="void" visibility="public">
+          <Argument type="String" name="day"/>
+        </Method>
+        <Method name="getNextDay" returnType="String" visibility="public"/>
+        <Method name="setNextDay" returnType="void" visibility="public">
+          <Argument type="String" name="nextDay"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DataManager" package="" visibility="public" xPosition="1114.0" yPosition="279.0">
+      <Fields>
+        <Field name="mgr" type="FRSManager" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="FRSManager" name="mgr"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="readSpiceJet" returnType="ArrayList&lt;Flight&gt;" visibility="public">
+          <Argument type="String" name="filepath"/>
+        </Method>
+        <Method name="readSilkAir" returnType="ArrayList&lt;Flight&gt;" visibility="public">
+          <Argument type="String" name="filepath"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DisplayManager" package="" visibility="public" xPosition="982.0" yPosition="20.0">
+      <Fields>
+        <Field name="screen1" type="screen_1" visibility="public"/>
+        <Field name="screen2" type="screen_2" visibility="public"/>
+        <Field name="screen3" type="screen_3" visibility="public"/>
+        <Field name="screen4" type="screen_4" visibility="public"/>
+        <Field name="mgr" type="FRSManager" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="FRSManager" name="mgr"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="showScreen1" returnType="void" visibility="public"/>
+        <Method name="showScreen2" returnType="void" visibility="public">
+          <Argument type="int" name="passno"/>
+          <Argument type="String" name="depCity"/>
+          <Argument type="String" name="doj"/>
+        </Method>
+        <Method name="showScreen3" returnType="void" visibility="public"/>
+        <Method name="showScreen4" returnType="void" visibility="public"/>
+        <Method name="exitFRS" returnType="void" visibility="public"/>
+        <Method name="CallFrs" returnType="void" visibility="public">
+          <Argument type="int" name="passno"/>
+          <Argument type="String" name="depCity"/>
+          <Argument type="String" name="doj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Flight" package="" visibility="public" xPosition="1410.0" yPosition="-161.0">
+      <Fields>
+        <Field name="origin" type="String" visibility="private"/>
+        <Field name="destination" type="String" visibility="private"/>
+        <Field name="frequency" type="String" visibility="private"/>
+        <Field name="flightno_sj" type="String" visibility="private"/>
+        <Field name="departure" type="String" visibility="private"/>
+        <Field name="arrival" type="String" visibility="private"/>
+        <Field name="via" type="String" visibility="private"/>
+        <Field name="effective_from" type="String" visibility="private"/>
+        <Field name="effective_till" type="String" visibility="private"/>
+        <Field name="remarks_sj" type="String" visibility="private"/>
+        <Field name="sector" type="String" visibility="private"/>
+        <Field name="days" type="String" visibility="private"/>
+        <Field name="flightno_sl" type="String" visibility="private"/>
+        <Field name="depTime" type="String" visibility="private"/>
+        <Field name="arrTime" type="String" visibility="private"/>
+        <Field name="remarks_sl" type="String" visibility="private"/>
+        <Field name="originCode" type="String" visibility="private"/>
+        <Field name="destinationCode" type="String" visibility="private"/>
+        <Field name="sectorCode" type="String" visibility="private"/>
+        <Field name="finalDestination" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="origin"/>
+          <Argument type="String" name="destination"/>
+          <Argument type="String" name="frequency"/>
+          <Argument type="String" name="flightno_sj"/>
+          <Argument type="String" name="departure"/>
+          <Argument type="String" name="arrival"/>
+          <Argument type="String" name="via"/>
+          <Argument type="String" name="effective_from"/>
+          <Argument type="String" name="effective_till"/>
+          <Argument type="String" name="remarks_sj"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="sector"/>
+          <Argument type="String" name="days"/>
+          <Argument type="String" name="flightno_sl"/>
+          <Argument type="String" name="depTime"/>
+          <Argument type="String" name="arrTime"/>
+          <Argument type="String" name="remarks_sl"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getOrigin" returnType="String" visibility="public"/>
+        <Method name="setOrigin" returnType="void" visibility="public">
+          <Argument type="String" name="origin"/>
+        </Method>
+        <Method name="getDestination" returnType="String" visibility="public"/>
+        <Method name="setDestination" returnType="void" visibility="public">
+          <Argument type="String" name="destination"/>
+        </Method>
+        <Method name="getFrequency" returnType="String" visibility="public"/>
+        <Method name="setFrequency" returnType="void" visibility="public">
+          <Argument type="String" name="frequency"/>
+        </Method>
+        <Method name="getFlightno_sj" returnType="String" visibility="public"/>
+        <Method name="setFlightno_sj" returnType="void" visibility="public">
+          <Argument type="String" name="flightno_sj"/>
+        </Method>
+        <Method name="getDeparture" returnType="String" visibility="public"/>
+        <Method name="setDeparture" returnType="void" visibility="public">
+          <Argument type="String" name="departure"/>
+        </Method>
+        <Method name="getArrival" returnType="String" visibility="public"/>
+        <Method name="setArrival" returnType="void" visibility="public">
+          <Argument type="String" name="arrival"/>
+        </Method>
+        <Method name="getVia" returnType="String" visibility="public"/>
+        <Method name="setVia" returnType="void" visibility="public">
+          <Argument type="String" name="via"/>
+        </Method>
+        <Method name="getEffective_from" returnType="String" visibility="public"/>
+        <Method name="setEffective_from" returnType="void" visibility="public">
+          <Argument type="String" name="effective_from"/>
+        </Method>
+        <Method name="getEffective_till" returnType="String" visibility="public"/>
+        <Method name="setEffective_till" returnType="void" visibility="public">
+          <Argument type="String" name="effective_till"/>
+        </Method>
+        <Method name="getRemarks_sj" returnType="String" visibility="public"/>
+        <Method name="setRemarks_sj" returnType="void" visibility="public">
+          <Argument type="String" name="remarks_sj"/>
+        </Method>
+        <Method name="getSector" returnType="String" visibility="public"/>
+        <Method name="setSector" returnType="void" visibility="public">
+          <Argument type="String" name="sector"/>
+        </Method>
+        <Method name="getDays" returnType="String" visibility="public"/>
+        <Method name="setDays" returnType="void" visibility="public">
+          <Argument type="String" name="days"/>
+        </Method>
+        <Method name="getFlightno_sl" returnType="String" visibility="public"/>
+        <Method name="setFlightno_sl" returnType="void" visibility="public">
+          <Argument type="String" name="flightno_sl"/>
+        </Method>
+        <Method name="getDepTime" returnType="String" visibility="public"/>
+        <Method name="setDepTime" returnType="void" visibility="public">
+          <Argument type="String" name="depTime"/>
+        </Method>
+        <Method name="getArrTime" returnType="String" visibility="public"/>
+        <Method name="setArrTime" returnType="void" visibility="public">
+          <Argument type="String" name="arrTime"/>
+        </Method>
+        <Method name="getRemarks_sl" returnType="String" visibility="public"/>
+        <Method name="setRemarks_sl" returnType="void" visibility="public">
+          <Argument type="String" name="remarks_sl"/>
+        </Method>
+        <Method name="getOriginCode" returnType="String" visibility="public">
+          <Argument type="Flight" name="t"/>
+        </Method>
+        <Method name="setOriginCode" returnType="void" visibility="public">
+          <Argument type="String" name="originCode"/>
+        </Method>
+        <Method name="getDestinationCode" returnType="String" visibility="public">
+          <Argument type="Flight" name="t"/>
+        </Method>
+        <Method name="setDestinationCode" returnType="void" visibility="public">
+          <Argument type="String" name="destinationCode"/>
+        </Method>
+        <Method name="getSectorCode" returnType="String" visibility="public">
+          <Argument type="Flight" name="t"/>
+        </Method>
+        <Method name="setSectorCode" returnType="void" visibility="public">
+          <Argument type="String" name="sectorCode"/>
+        </Method>
+        <Method name="getFinalDestination" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FRSManager" package="" visibility="public" xPosition="2158.0" yPosition="20.0">
+      <Fields>
+        <Field name="dataMgr" type="DataManager" visibility="package"/>
+        <Field name="displayMgr" type="DisplayManager" visibility="package"/>
+        <Field name="searchMgr" type="SearchManager" visibility="package"/>
+        <Field name="bookingMgr" type="BookingManager" visibility="package"/>
+        <Field name="silkair" type="ArrayList&lt;Flight&gt;" visibility="package"/>
+        <Field name="spicejet" type="ArrayList&lt;Flight&gt;" visibility="package"/>
+        <Field name="cf" type="ArrayList&lt;ComboFlight&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="screen_1" package="" visibility="public" xPosition="1641.0" yPosition="295.0">
+      <Fields>
+        <Field name="mgr" type="DisplayManager" visibility="private"/>
+        <Field name="ac" type="AnimationClass" visibility="private"/>
+        <Field name="Backslide1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Backslide2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Date" type="datechooser.beans.DateChooserCombo" visibility="public"/>
+        <Field name="From" type="javax.swing.JComboBox&lt;String&gt;" visibility="public"/>
+        <Field name="Passenger" type="javax.swing.JSpinner" visibility="public"/>
+        <Field name="SearchButton" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="To" type="javax.swing.JComboBox&lt;String&gt;" visibility="public"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="DisplayManager" name="mgr"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="SlideShow" returnType="void" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="ToActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="SearchButtonMouseReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="SearchButtonMousePressed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="SearchButtonMouseExited" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="SearchButtonMouseEntered" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="SearchButtonMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="FromActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="Backslide1AncestorAdded" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.AncestorEvent" name="evt"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="screen_2" package="" visibility="public" xPosition="1486.0" yPosition="500.0">
+      <Fields>
+        <Field name="mgr" type="DisplayManager" visibility="private"/>
+        <Field name="CurrentDate" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="FromT0" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="ProceedButton" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Table" type="javax.swing.JTable" visibility="public"/>
+        <Field name="Time" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="date2" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jScrollPane2" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="passenger2" type="javax.swing.JLabel" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="DisplayManager" name="mgr"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="formWindowClosed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="ProceedButtonMouseEntered" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="ProceedButtonMouseExited" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="ProceedButtonMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+        <Method name="showDate" returnType="void" visibility="package"/>
+        <Method name="showTime" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="screen_3" package="" visibility="public" xPosition="9.0" yPosition="145.0">
+      <Fields>
+        <Field name="mgr" type="DisplayManager" visibility="private"/>
+        <Field name="Arrival" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="Departure" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="Fields" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Flight" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="FromViaTo" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="PassengerName" type="javax.swing.JTextField" visibility="public"/>
+        <Field name="ProceedButton" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="TotalDuration" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="Transit" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="Via" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="DisplayManager" name="mgr"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="ProceedButtonMouseEntered" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="ProceedButtonMouseExited" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="ProceedButtonMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="screen_4" package="" visibility="public" xPosition="771.0" yPosition="410.0">
+      <Fields>
+        <Field name="mgr" type="DisplayManager" visibility="private"/>
+        <Field name="Arrival" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="Departure" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="ExitButton" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Fields" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="Flight" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="Pnr" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="TotalDuration" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="Transit" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="Via" type="javax.swing.JLabel" visibility="public"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="DisplayManager" name="mgr"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="ExitButtonMouseEntered" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="ExitButtonMouseExited" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="ExitButtonMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="ExitButtonAncestorAdded" returnType="void" visibility="private">
+          <Argument type="javax.swing.event.AncestorEvent" name="evt"/>
+        </Method>
+        <Method name="setIcon" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="SearchManager" package="" visibility="public" xPosition="1233.0" yPosition="255.0">
+      <Fields>
+        <Field name="mgr" type="FRSManager" visibility="package"/>
+        <Field name="bkMgr" type="BookingManager" visibility="package"/>
+        <Field name="passno" type="int" visibility="private"/>
+        <Field name="depCity" type="String" visibility="private"/>
+        <Field name="doj" type="String" visibility="private"/>
+        <Field name="transit_time" type="String" visibility="private"/>
+        <Field name="total_time" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="FRSManager" name="mgr"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="searchFlight" returnType="ArrayList&lt;ComboFlight&gt;" visibility="public">
+          <Argument type="int" name="passno"/>
+          <Argument type="String" name="depCity"/>
+          <Argument type="String" name="doj"/>
+          <Argument type="ArrayList&lt;Flight&gt;" name="sj"/>
+          <Argument type="ArrayList&lt;Flight&gt;" name="sl"/>
+        </Method>
+        <Method name="getPassno" returnType="int" visibility="public"/>
+        <Method name="setPassno" returnType="void" visibility="public">
+          <Argument type="int" name="passno"/>
+        </Method>
+        <Method name="getDepCity" returnType="String" visibility="public"/>
+        <Method name="setDepCity" returnType="void" visibility="public">
+          <Argument type="String" name="depCity"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="mgr" source="screen_4" target="DisplayManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Flight" target="Flight" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="BookingManager" target="Flight" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="SearchManager" target="Flight" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ComboFlight" target="Flight" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mgr" source="BookingManager" target="FRSManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dmgr" source="BookingManager" target="DataManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bookingMgr" source="FRSManager" target="BookingManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mgr" source="DisplayManager" target="FRSManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="screen4" source="DisplayManager" target="screen_4" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mgr" source="SearchManager" target="FRSManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mgr" source="screen_2" target="DisplayManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="displayMgr" source="FRSManager" target="DisplayManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cf" source="FRSManager" target="ComboFlight" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;ComboFlight&gt;"/>
+    <HasRelation name="silkair" source="FRSManager" target="Flight" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Flight&gt;"/>
+    <HasRelation name="mgr" source="screen_3" target="DisplayManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="screen3" source="DisplayManager" target="screen_3" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="spicejet" source="FRSManager" target="Flight" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Flight&gt;"/>
+    <HasRelation name="screen1" source="DisplayManager" target="screen_1" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mgr" source="DataManager" target="FRSManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="screen2" source="DisplayManager" target="screen_2" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mgr" source="screen_1" target="DisplayManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dataMgr" source="FRSManager" target="DataManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="searchMgr" source="FRSManager" target="SearchManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bkMgr" source="SearchManager" target="BookingManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="DataManager" target="Flight" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

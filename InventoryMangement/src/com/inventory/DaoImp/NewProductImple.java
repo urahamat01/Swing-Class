@@ -6,6 +6,7 @@
 package com.inventory.DaoImp;
 
 import com.inventory.Connection.DBConnection;
+import com.inventory.Connection.DataConnect;
 import com.inventory.Dao.Producte;
 import com.inventory.pojo.Producta;
 import java.sql.Connection;
@@ -23,13 +24,12 @@ import java.util.logging.Logger;
  */
 public class NewProductImple implements Producte {
 
-    Connection conn = DBConnection.getDBConnection();
+    Connection conn = DBConnection.getConnect();
 
-    public static void main(String[] args) {
-        NewProductImple pdi = new NewProductImple();
-        pdi.createTable();
-    }
-
+//    public static void main(String[] args) {
+//        NewProductImple pdi = new NewProductImple();
+//        pdi.createTable();
+//    }
     @Override
     public void createTable() {
 
@@ -51,15 +51,13 @@ public class NewProductImple implements Producte {
         try {
             PreparedStatement pstm = conn.prepareStatement(sql);
 
-//            
-//            int id;
+//    int id;
 //    String name;
 //    String code;
 //    Date date;
 //    int qulty;
 //    double uPrice;
 //    String total;
-//            
             pstm.setString(1, p.getProductName());
             pstm.setString(2, p.getCode());
             pstm.setInt(3, p.getQulty());
